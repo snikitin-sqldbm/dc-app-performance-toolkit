@@ -11,13 +11,13 @@
 # This value can not be altered after the configuration has been applied.
 # Only lowercase letters, numbers, dashes, and dots are allowed.
 # ! REQUIRED !
-environment_name = "dcapt-product"
+environment_name = "dcapt-sqldbm"
 
 # Supported products: jira, confluence, bitbucket, crowd and bamboo.
 # For JSM set product as jira.
 # e.g.: products = ["jira"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["confluence"]
 
 # License
 # To avoid storing license in a plain text file, we recommend storing it in an environment variable prefixed with `TF_VAR_` (i.e. `TF_VAR_jira_license`) and keep the below line commented out
@@ -25,7 +25,7 @@ products = ["product-to-deploy"]
 # ! IMPORTANT ! Please make sure valid license is used without spaces and new line symbols.
 # ! REQUIRED !
 jira_license = "jira-license"
-confluence_license = "confluence-license"
+confluence_license = "AAABlQ0ODAoPeNp1klFv2jAUhd/zKyLtZX0Is52FUiRLbZ10zRZIuxBKq7444QYsgqG2w5Z/P1MXdZvUR99zfP3dc/3pAZZ+XhufEB99HYfROBz6LJ75BJHIYwq4ETsZcwP0WAkwCgjxYtC1EvujRNlONm0Hsgb/s/Vxn4E0oM6ex35y4G332sCbcGGrkltb8nsvVP9XSxwQ7GWiBqk/EFsnzkHp45PEK7rqncCoDrzaYgym3bYClTeltk4aYO+dwLlyteJSaFfRL+2y2gZLOLjbvDbiAM5opzL2nFjultpuK+gHUmyEEfLS3RvUu+0J7JbrNZ0wxG7u2cMFNiX7vjjf3K+vf3xJynY+WvBHXZpfaVndJXi+bE2zKmYNhFn4lD5F1W0vX9AzdRRvQcz6PUz5FijLJ5PkJ0uvMqcXhiubL214q+EUWxrTLI2LZBpkBBMUYTL0ClAHUFa5XiASXDzmOEino2GQ5dE31+q4LrctN/QG+lPEeIjQORqFIfbuOlWvuYb/P8FbRK+QHydkmei/XH8AeqfPJDAsAhRrd2nHIlkeU9PI7jaYOfr2zyR6IgIUXzP2fgdQSTSImUsoVOs98wPQ5j0=X02jj"
 bitbucket_license = "bitbucket-license"
 crowd_license = "crowd-license"
 bamboo_license = "bamboo-license"
@@ -240,7 +240,7 @@ confluence_collaborative_editing_enabled = true
 
 # A list of JVM arguments to be passed to the server. Defaults to an empty list.
 # Example: ["-Dproperty=value", "-Dproperty1=value1"]
-confluence_additional_jvm_args = ["-Dupm.plugin.upload.enabled=true"]
+confluence_additional_jvm_args = ["-Dupm.plugin.upload.enabled=true","-Datlassian.upm.plugin.upload.enabled=true"]
 
 ################################################################################
 # Bitbucket Settings
